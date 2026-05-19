@@ -1,2 +1,0 @@
-# ZAARAMURTUZA.github.io
-
