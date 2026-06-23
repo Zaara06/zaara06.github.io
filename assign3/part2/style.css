@@ -68,3 +68,49 @@ p,
 li {
   font-size: 1.6rem;
 }
+
+/* Links */
+
+a {
+  color: #a66;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #844;
+}
+
+a:hover,
+a:focus {
+  color: #a66;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* External link icon */
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 0.8em;
+  height: 0.8em;
+  margin-left: 0.25em;
+  background: url("external-link-52.png") no-repeat center;
+  background-size: contain;
+}
+
+/* Lists */
+
+ul,
+ol {
+  margin: 1.6rem 0;
+  line-height: 1.8;
+}
+
+li {
+  line-height: 1.8;
+  list-style-type: square;
+}
