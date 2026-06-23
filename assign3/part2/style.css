@@ -114,3 +114,33 @@ li {
   line-height: 1.8;
   list-style-type: square;
 }
+
+/* Navigation */
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+nav a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.8rem;
+  border: 1px solid #a66;
+  padding: 1.2rem;
+  color: #a66;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #a66;
+  color: white;
+}
