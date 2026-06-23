@@ -33,3 +33,38 @@ footer {
 footer p {
   text-align: center;
 }
+
+
+/* Typography */
+
+body {
+  font-family: "Merriweather", serif;
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+}
+
+h1,
+h2 {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+section h2 + p {
+  text-indent: 2rem;
+}
+
+p,
+li {
+  font-size: 1.6rem;
+}
