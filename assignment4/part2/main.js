@@ -25,3 +25,21 @@ const images = [
     alt: "Large moth on a leaf",
   },
 ];
+const baseURL =
+  "https://mdn.github.io/shared-assets/images/examples/learn/gallery/";
+for (const image of images) {
+  const newImage = document.createElement("img");
+
+  newImage.src = baseURL + image.filename;
+  newImage.alt = image.alt;
+
+  newImage.setAttribute("tabindex", "0");
+
+  thumbBar.appendChild(newImage);
+
+  newImage.addEventListener("click", () => updateDisplayedImage(newImage));
+}
+function updateDisplayedImage(image) {
+  displayedImage.src = image.src;
+  displayedImage.alt = image.alt;
+}
