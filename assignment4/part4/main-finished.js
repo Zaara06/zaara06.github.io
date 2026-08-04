@@ -18,14 +18,22 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
-class Ball {
-  constructor(x, y, velX, velY, color, size) {
+class Shape {
+  constructor(x, y, velX, velY) {
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+  }
+}
+
+class Ball extends Shape {
+  constructor(x, y, velX, velY, color, size) {
+    super(x, y, velX, velY);
+
     this.color = color;
     this.size = size;
+    this.exists = true;
   }
 
   draw() {
@@ -56,7 +64,7 @@ class Ball {
     this.y += this.velY;
   }
 
- collisionDetect() {
+  collisionDetect() {
     for (const ball of balls) {
       if (!(this === ball) && ball.exists) {
         const dx = this.x - ball.x;
@@ -93,13 +101,16 @@ function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
 
-  for (const ball of balls) {
+ for (const ball of balls) {
+  if (ball.exists) {
     ball.draw();
     ball.update();
     ball.collisionDetect();
   }
+}
 
   requestAnimationFrame(loop);
 }
 
 loop();
+
